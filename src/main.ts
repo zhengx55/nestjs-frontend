@@ -1,15 +1,20 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import { setupStore } from "./store";
-import { setupRouter } from "./router";
+import { createApp } from 'vue';
+import App from './App.vue';
+
+import { setupStore } from './store/index';
+import { setupRouter } from './router';
+
+import 'bootstrap/dist/js/bootstrap';
 
 function bootstrap() {
   const app = createApp(App);
-  // router config
-  setupStore(app);
-  // piana config
+  // router
   setupRouter(app);
-  app.mount("#app");
+
+  // store
+  setupStore(app);
+
+  app.mount('#app');
 }
 
 bootstrap();
