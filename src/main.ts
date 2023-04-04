@@ -5,7 +5,9 @@ import { setupStore } from "./store";
 
 function bootstrap() {
   const app = createApp(App);
+  // router config
   setupStore(app);
+  // piana config
   app.mount("#app");
 }
 
